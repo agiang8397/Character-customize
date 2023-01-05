@@ -7,6 +7,7 @@ export const PartList = ({
   selected,
   zoom = 1,
   top = "50%",
+  name,
 }) => {
   let parts = [];
   for (let i = 0; i < total; i++) {
@@ -28,5 +29,10 @@ export const PartList = ({
       </div>
     );
   }
-  return <div className="list">{parts}</div>;
+  return (
+    <div className="list-section">
+      <h2>{name}</h2>
+      <div className="list">{parts}</div>
+    </div>
+  );
 };

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import Avatar from "./components/Avatar";
 import { PartList } from "./components/PartList";
+import Title from "./components/Title";
 const total = {
   body: 17,
   eyes: 17,
@@ -47,9 +48,7 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <div className="title">CHARACTER</div>
-      <div className="subtitle">🛠️CUSTOMIZATION🛠️</div>
-      <div className="divider"></div>
+      <Title />
       <div className="avatar-group gap-30">
         <div>
           <div className="avatar-wrapper">
@@ -74,110 +73,98 @@ function App() {
           </div>
         </div>
         <div>
-          <div className="list-section">
-            <h2>Body</h2>
-            <PartList
-              total={total.body}
-              path="body"
-              set={setBody}
-              selected={body}
-            />
-          </div>
-          <div className="list-section">
-            <h2>Eyes</h2>
-            <PartList
-              total={total.eyes}
-              path="eyes"
-              set={setEyes}
-              selected={eyes}
-              zoom={2.5}
-              top="35px"
-            />
-          </div>
-          <div className="list-section">
-            <h2>Hair</h2>
-            <PartList
-              total={total.hair}
-              path="hair"
-              set={setHair}
-              selected={hair}
-            />
-          </div>
-          <div className="list-section">
-            <h2>Mouth</h2>
-            <PartList
-              total={total.mouth}
-              path="mouths"
-              set={setMouth}
-              selected={mouth}
-              zoom={2}
-            />
-          </div>
-          <div className="list-section">
-            <h2>Eyebrows</h2>
-            <PartList
-              total={total.eyebrows}
-              path="eyebrows"
-              set={setEyebrow}
-              selected={eyebrows}
-            />
-          </div>
-          <div className="list-section">
-            <h2>Glasses</h2>
-            <PartList
-              total={total.glasses}
-              path="accessories/glasses"
-              set={setGlasses}
-              selected={glasses}
-            />
-          </div>
-          <div className="list-section">
-            <h2>Earrings</h2>
-            <PartList
-              total={total.earrings}
-              path="accessories/earrings"
-              set={setEarrings}
-              selected={earrings}
-            />
-          </div>
-          <div className="list-section">
-            <h2>Hats</h2>
-            <PartList
-              total={total.hats}
-              path="accessories/hats"
-              set={setHats}
-              selected={hats}
-            />
-          </div>
-          <div className="list-section">
-            <h2>Clothing 1</h2>
-            <PartList
-              total={total.clothing1}
-              path="clothes/layer_1"
-              set={setClothing1}
-              selected={clothing1}
-            />
-          </div>
-          <div className="list-section">
-            <h2>Clothing 2</h2>
-            <PartList
-              total={total.clothing2}
-              path="clothes/layer_2"
-              set={setClothing2}
-              selected={clothing2}
-            />
-          </div>
-          <div className="list-section">
-            <h2>Clothing 3</h2>
-            <PartList
-              total={total.clothing3}
-              path="clothes/layer_3"
-              set={setClothing3}
-              selected={clothing3}
-              zoom={2}
-              top="-15px"
-            />
-          </div>
+          <PartList
+            total={total.body}
+            path="body"
+            set={setBody}
+            selected={body}
+            name="Body"
+          />
+
+          <PartList
+            total={total.eyes}
+            path="eyes"
+            set={setEyes}
+            selected={eyes}
+            zoom={2.5}
+            top="35px"
+            name="Eyes"
+          />
+
+          <PartList
+            total={total.hair}
+            path="hair"
+            set={setHair}
+            selected={hair}
+            name="Hair"
+          />
+
+          <PartList
+            total={total.mouth}
+            path="mouths"
+            set={setMouth}
+            selected={mouth}
+            zoom={2}
+            name="Mouth"
+          />
+
+          <PartList
+            total={total.eyebrows}
+            path="eyebrows"
+            set={setEyebrow}
+            selected={eyebrows}
+            name="Eyebrows"
+          />
+
+          <PartList
+            total={total.glasses}
+            path="accessories/glasses"
+            set={setGlasses}
+            selected={glasses}
+            name="Glasses"
+          />
+
+          <PartList
+            total={total.earrings}
+            path="accessories/earrings"
+            set={setEarrings}
+            selected={earrings}
+            name="Earrings"
+          />
+
+          <PartList
+            total={total.hats}
+            path="accessories/hats"
+            set={setHats}
+            selected={hats}
+            name="Hats"
+          />
+
+          <PartList
+            total={total.clothing1}
+            path="clothes/layer_1"
+            set={setClothing1}
+            selected={clothing1}
+            name="Clothing 1"
+          />
+
+          <PartList
+            total={total.clothing2}
+            path="clothes/layer_2"
+            set={setClothing2}
+            selected={clothing2}
+            name="Clothing 2"
+          />
+
+          <PartList
+            total={total.clothing3}
+            path="clothes/layer_3"
+            set={setClothing3}
+            selected={clothing3}
+            zoom={2}
+            top="-15px"
+            name="Clothing 3"
+          />
         </div>
       </div>
     </div>

@@ -40,7 +40,7 @@ body {
     whitesmoke;
 
   background-blend-mode: multiply;
-}
+  }
 
 .App {
   max-width: 1200px;
